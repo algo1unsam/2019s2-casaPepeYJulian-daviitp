@@ -1,0 +1,36 @@
+import casa.*
+import cosas.*
+import cuenta.*
+
+
+test "Extraer 900 teniendo 1000" {
+	
+	cuenta.depositar(1000)
+	cuenta.extraer(900)
+	assert.equals(100,cuenta.saldo())
+
+}
+
+test "Extraer 1200 teniendo 1000" {
+	
+	cuenta.depositar(1000)
+	assert.throwsException({cuenta.extraer(1200)})
+	
+}
+
+test "Comprar tira de asado teniendo 1000" {
+	
+	cuenta.depositar(1000)
+	casa.comprar(tiraDeAsado)
+	assert.that(casa.cosas().contains(tiraDeAsado))
+	
+}
+
+test "Comprar plancha teniendo 1000" {
+	
+	cuenta.depositar(1000)
+	casa.comprar(plancha)
+	assert.notThat(casa.cosas().contains(plancha))
+	
+	
+}

@@ -27,3 +27,21 @@ object plancha {
 	method esComida() { return false }
 	method esElectrodomestico() { return true }	
 }
+
+object tomate {
+	method precio() { return 50 }
+	method esComida() { return false }
+	method esElectrodomestico() { return false }
+}
+
+object oregano {
+	method precio() { return 8 }
+	method esComida() { return false }
+	method esElectrodomestico() { return false }
+}
+
+object pilas{
+	method precio() { return 100 }
+	method esComida() { return false }
+	method esElectrodomestico() { return false }
+}
